@@ -1,0 +1,208 @@
+﻿<Window x:Class="NetClient_Chat.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetClient_Chat.Views"
+        mc:Ignorable="d"
+        Height="550"
+        Width="450"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+
+    <!--// Main Window \\-->
+    <Border
+        CornerRadius="20"
+        Background="#272535"
+        BorderThickness="0">
+
+        <Grid>
+
+            <!--// Window Markup \\-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--// Titile Section \\-->
+            <Border
+                Background="Transparent"
+                BorderThickness="0"
+                MouseDown="MoveWindow">
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+                    <Button
+                        Style="{StaticResource MinimizeStyle}"
+                        Click="MinimizeWindow"/>
+
+                    <Button
+                        Style="{StaticResource CloseStyle}"
+                        Click="CloseWindow"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!--// Client Settings Panel \\-->
+            <Border
+                Grid.Row="1"
+                Background="Transparent"
+                BorderThickness="0">
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <Button x:Name="ChatButton"
+                        Style="{StaticResource ChatStyle}"
+                        Visibility="Visible"
+                        Click="StartChatingButton_Click">
+
+                        <Button.ToolTip>
+                            <ToolTip
+                                Content="Start Chating"
+                                Width="110"
+                                Style="{StaticResource ButtonToolTipStyle}"/>
+                        </Button.ToolTip>
+
+                    </Button>
+
+                    <Button x:Name="SettingsButton"
+                        Style="{StaticResource SettingsStyle}"
+                        Click="ShowSettingsSection_Click">
+
+                        <Button.ToolTip>
+                            <ToolTip
+                                Content="Settings"
+                                Style="{StaticResource ButtonToolTipStyle}"/>
+                        </Button.ToolTip>
+
+                    </Button>
+
+                    <Button x:Name="TurnBackButton"
+                        Style="{StaticResource TurnBackStyle}"
+                        Visibility="Collapsed"
+                        Click="TurnBackButton_Click">
+
+                        <Button.ToolTip>
+                            <ToolTip
+                                Content="Turn Back"
+                                Width="85"
+                                Style="{StaticResource ButtonToolTipStyle}"/>
+                        </Button.ToolTip>
+
+                    </Button>
+
+                </StackPanel>
+
+
+            </Border>
+
+            <!--// Client Settins Section \\-->
+            <Border x:Name="SettingsSection"
+                Grid.Row="2"
+                Background="Transparent"
+                BorderThickness="0"
+                Visibility="Collapsed">
+
+                <StackPanel
+                    VerticalAlignment="Center"
+                    Margin="0,0,0,50">
+
+                    <TextBox x:Name="iPAddressTextBox"
+                        Style="{StaticResource IpAddressStyle}"/>
+
+                    <TextBox x:Name="PortTextBox"
+                        Style="{StaticResource PortStyle}"/>
+
+                    <TextBox x:Name="UsernameTextBox"
+                        Style="{StaticResource UsernameStyle}"/>
+
+                    <StackPanel x:Name="ControlButtonsPanel"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+
+                        <Button
+                            Style="{StaticResource SaveButtonStyle}"
+                            Click="SaveChanges_Click">
+
+                            <Button.ToolTip>
+                                <ToolTip
+                                    Content="Save Changes"
+                                    Width="110"
+                                    Style="{StaticResource ButtonToolTipStyle}"/>
+                            </Button.ToolTip>
+
+                        </Button>
+
+                        <Button
+                            Style="{StaticResource CancelButtonStyle}"
+                            Click="CancelChanges_Click">
+
+                            <Button.ToolTip>
+                                <ToolTip
+                                    Content="Cancel Changes"
+                                    Width="120"
+                                    Style="{StaticResource ButtonToolTipStyle}"/>
+                            </Button.ToolTip>
+
+                        </Button>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+
+            <!--// Main/Chat Section \\-->
+            <Grid x:Name="ChatSection"
+                Grid.Row="2"
+                Background="Transparent"
+                Visibility="Visible">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <!--// Display Chat \\-->
+                <ScrollViewer
+                    VerticalScrollBarVisibility="Hidden"
+                    HorizontalScrollBarVisibility="Hidden">
+
+                    <StackPanel x:Name="messages"
+                        VerticalAlignment="Bottom"/>
+
+                </ScrollViewer>
+
+                <!--// Write Message Section \\-->
+                <StackPanel
+                    Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <TextBox x:Name="inputText"
+                        Grid.Row="1"
+                        Style="{StaticResource InputStyle}"
+                        KeyDown="InputText_KeyDown"/>
+
+                    <Button
+                        Style="{StaticResource SentStyle}"
+                        Click="SentMessage_Click"/>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+    </Border>
+
+</Window>

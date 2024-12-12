@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Cancel.png" />
+    <None Remove="Images\Chat.png" />
+    <None Remove="Images\Remove.png" />
+    <None Remove="Images\Save.png" />
+    <None Remove="Images\Sent.png" />
+    <None Remove="Images\Settings.png" />
+    <None Remove="Images\TurnBack.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Cancel.png" />
+    <Resource Include="Images\Chat.png" />
+    <Resource Include="Images\Remove.png" />
+    <Resource Include="Images\Save.png" />
+    <Resource Include="Images\Sent.png" />
+    <Resource Include="Images\Settings.png" />
+    <Resource Include="Images\TurnBack.png" />
+  </ItemGroup>
+
+</Project>

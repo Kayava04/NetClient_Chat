@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetClient_Chat", "NetClient_Chat\NetClient_Chat.csproj", "{9C58E369-4C16-4CF4-877A-E6A19466074D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetServer", "NetServer\NetServer.csproj", "{2753A4BF-D97E-4C3A-AE1D-0B0795B195C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C58E369-4C16-4CF4-877A-E6A19466074D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C58E369-4C16-4CF4-877A-E6A19466074D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C58E369-4C16-4CF4-877A-E6A19466074D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C58E369-4C16-4CF4-877A-E6A19466074D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2753A4BF-D97E-4C3A-AE1D-0B0795B195C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2753A4BF-D97E-4C3A-AE1D-0B0795B195C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2753A4BF-D97E-4C3A-AE1D-0B0795B195C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2753A4BF-D97E-4C3A-AE1D-0B0795B195C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E93079A7-DE9F-436E-8B9C-91B59C1B73FB}
+	EndGlobalSection
+EndGlobal

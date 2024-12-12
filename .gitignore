@@ -1,0 +1,7 @@
+.vs
+
+NetClient_Chat/bin
+NetClient_Chat/obj
+
+NetServer/bin
+NetServer/obj
